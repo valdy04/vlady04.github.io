@@ -1,0 +1,135 @@
+			<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+	<link rel="stylesheet" href="../../css/recipe_cards.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.--><script>var __adobewebfontsappname__="dreamweaver"</script><script src="http://use.edgefonts.net/dancing-script:n4:default;arapey:n4:default;euphoria-script:n4:default.js" type="text/javascript"></script>
+</head>
+
+<body>
+	<div class="page-wrapper">
+	<header class="top-header">
+	  <div class="top-banner">
+		<div id="logo">
+			<img src="../../images/good4me-logo.png" width="" height="" alt=""/>
+		  </div>
+		</div>
+		<div class="menu">
+			<div class="toggle"><ion-icon name="add-outline"></ion-icon></div>
+			<li style="--i:0;">
+				<a href="../../index.html"><ion-icon name="home-outline"></ion-icon>
+				</a>
+			</li>
+			<li style="--i:1;">
+				<a href="../../recipes.html"><ion-icon name="book-outline"></ion-icon></a>
+			</li>
+			<li style="--i:2;">
+				<a href="../../about_us.html"><ion-icon name="megaphone-outline"></ion-icon></a>
+			</li>
+			<li style="--i:3;">
+				<a href="../../contact.html"><ion-icon name="chatbox-outline"></ion-icon></a>
+				</li>
+			
+		</div>
+		<div class="navigation">
+			<ul>
+				<li class="list active">
+					<a href="../../index.html">
+						<span class="icon">
+							<ion-icon name="home-outline"></ion-icon>
+						</span>
+					<span class="text">Home</span>
+				</a>
+				</li>
+				<li class="list">
+					<a href="../../recipes.html">
+						<span class="icon">
+							  <ion-icon name="book-outline"></ion-icon>
+						</span>
+					<span class="text">Recipes</span>
+				</a>
+				</li>
+				<li class="list">
+					<a href="../../about_us.html">
+						<span class="icon">
+							<ion-icon name="megaphone-outline"></ion-icon>
+						</span>
+					<span class="text">about</span>
+				</a>
+				</li>	
+				<li class="list">
+					<a href="../../contact.html">
+						<span class="icon">
+							<ion-icon name="chatbubbles-outline"></ion-icon>
+						</span>
+					<span class="text">contact</span>
+				</a>
+				</li>
+				<div class= "indicator"></div>
+			</ul>
+		</div>
+				
+		<script>
+			const list = document.querySelectorAll('.list');
+			function activeLink(){
+				list.forEach((item) =>
+				item.classList.remove('active'));
+				this.classList.add('active')
+			}
+			list.forEach((item) =>
+			item.addEventListener('click',activeLink))
+		</script>
+		
+		
+			<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+		
+	<script>
+	let toggle= document.querySelector('.toggle');
+	let menu= document.querySelector('.menu');
+	toggle.onclick = function(){
+		menu.classList.toggle('active')
+	}
+	</script>
+	</header>
+	<main class="main clearfix">
+			
+<div class= "recipe-card">
+		<figure>
+				<img src="../../images/carrot cake.jpg" alt="carrot cake">
+			</figure>
+			<h1>Carrot cake</h1>
+			
+		<div class="card-meta">
+				<ul class="dish-type">
+					<h3>Ingredients</h3>
+			<li>2 médium carrots</li>
+			<li>400 grams of sugar or 200 grams of any sweetener without calories</li>
+			<li>4 eggs</li>
+			<li>1 tsp vanilla</li>
+			<li>1 tsp baking soda </li>
+			<li>300 grams of whole wheat flour or oat flour</li>
+			<li>250 milliliters of vegetable oil</li>
+			</ul>
+
+					<ol class="dish-stats">
+						<h3>Preparation</h3>
+					  <li>Preheat the oven to 180°C</li>
+			<li>Wash, peel and cut the carrots into small pieces.</li>
+			<li>Add the chopped carrot to the blender along with the oil, sugar, vanilla essence and eggs.</li>
+			<li>Allow to grind until a homogeneous mixture is obtained.</li>
+			<li>use non-stick spray in a baking pan and pour the previous preparation, now with a sieve pass the flour and baking powder and incorporate.  Mix very well with the help of a stick and tap the mold to remove any air bubbles.</li>
+			<li>If you want you can decorate the top of your muffins (Suggestions: strawberries, blue berries, sugar-free chocolate chips or walnuts)</li>
+			<li>Bake for 35-40 minutes at 170°C</li>
+					</ol>
+		 </div><!--end .card meta-->
+		<h2>Your carrot cake is ready and you can decorate with a little cinnamon powder.</h2>  
+		
+  			</div>
+		</main>
+	</div>
+</body>
+</html>
