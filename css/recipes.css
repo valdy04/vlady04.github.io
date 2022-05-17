@@ -248,7 +248,7 @@ a:focus,a:visited,a:active{
     background-color: deeppink;
     padding: .5rem 0.6rem;
     border-radius: 100px;
-    font-family: allura;
+    font-family: 'allura';
     font-style: normal;
 	font-size: 12px;
 	}
