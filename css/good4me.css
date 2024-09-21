@@ -38,7 +38,6 @@ a:focus,a:visited,a:active{
 	
 	max-width: 1100px;
 	margin-left:0;
-	margim-right: auto;
 }
 .top-banner{
 	width: 100%;
@@ -230,19 +229,22 @@ a:focus,a:visited,a:active{
 	color: green;
 */
 .infoContainer{
-	position:relative;
+	position: relative ;
 	margin: auto;
-	width: 50%;
-	height: 80px;
-	margin-bottom: 15px;
+	width: 100%;
+	height: 90px ;
+	display: flex;
+	margin-bottom: 1px;
 	align-items: center;
 	align-content: center;
-	transition: all 0.5s ease; 
+	transition: all 0.5s ease;
+	justify-content: center; 
 	}
 .infoCard{
-	position: absolute;
+	position: absolute  ;
 	width: 100%;
-	height: 100%;
+	height: 100% ;
+	display: flex;
 	transform-style: preserve-3d;
 	transition: all 0.5s ease;
 	margin-left: auto;
@@ -251,27 +253,31 @@ a:focus,a:visited,a:active{
 	align-items: center;
 	text-align: center;
 	justify-content: center;
+	z-index: 1;
 	
 	
 }
 .infoContainer:hover .infoCard{
 	transform: rotateY(180deg);
+	height: 100%;
+	width: 100%;
 
 	transition: all 0.5s ease;
 	
 }
 .infoContainer:hover{
-	width:80%;
-	height: 550px;
-	transition: all 0.5s ease;
+
+	width:100% ;
+	height: 300px ;
 	
 }
+
 .thefront{
 	display: grid;
 	place-items: center;
 	position: absolute;
-	width: 100%;
-	height: 100%;
+	width: 90%;
+	height: 100px ;
 	backface-visibility: hidden;
 	background-color: white;
 	border-radius: 100px;
@@ -280,21 +286,22 @@ a:focus,a:visited,a:active{
 	font-size: 20px;
 	margin:auto;
 	text-align: center;
-	padding-left: 30px;
+	padding-left: 9%;
 	
 	
 }
 
 .theback{
-    position: absolute;
+    position: absolute ;
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
     transform: rotateY(180deg);
     border-radius: 50px;
-    font-size: 18px;
+    font-size: 15px;
     background-color: green;
     color: white;
+	
 }
 #welcome_img{
 	background: white;
@@ -313,18 +320,19 @@ a:focus,a:visited,a:active{
 	-wedkit-transform: translatez(0);
 	
 }
-.infoContainer:hover #welcome_img {
-	transform: scaleY(0);
+/*.infoContainer:hover #welcome_img {
+	transform:;
 }
-
+*/
 
 #topic-one-img{
     width: 100%;
     background-image: url( "../images/trashfood.png");
-    height: 300px;
+    height: 300px ;
     background-size:contain;
     background-position: center;
 	background-repeat: no-repeat;
+	
 	
 }
 #topic-two-img{
@@ -625,11 +633,89 @@ a:focus,a:visited,a:active{
 /*			indicator color*/
 		box-shadow: -15px 18px #FFD395;
 }
+	/*.infoContainer:hover{
+	width: ;
+	height: ;
+	}
+	*/
+	.infoContainer{
+		position: relative ;
+		margin: auto;
+		height: 100px;
+		width: 50%;
+		margin-bottom: 10px;
+		display: flex;
+		align-items: center;
+		align-content: center;
+		transition: all 0.5s ease;
+		justify-content: center;
+		transition: all 0.5 ease;
+
+		}
+	.infoCard{
+		position: absolute  ;
+		width: 100%;
+		height: 100%;
+		transform-style: preserve-3d;
+		transition: all 0.5s ease;
+		display: flex;
+		align-content: center;
+		align-items: center;
+		text-align: center;
+		justify-content: center;
+		
+		
+	}
 	.infoContainer:hover{
-	width: 50%;
-		height: 300px;
+		margin: auto;
+		height: 250px;
+		width: 60%;
+		margin-bottom: 20px;
+		align-items: center;
+		align-content: center;
+		transition: all 0.5s ease;
+		}
+		
+		
+	.infoContainer:hover .infoCard{
+		transform: rotateY(180deg);
+		height: 100%;
+		width: 100%;
+		transition: all 0.5s ease;
+		
 	}
 
+	
+	.thefront{
+		display: grid;
+		place-items: center;
+		position: absolute;
+		width: 100%;
+		height: 100px ;
+		backface-visibility: hidden;
+		background-color: white;
+		border-radius: 100px;
+		justify-content: center;
+		align-items: center;
+		font-size: 20px;
+		margin:auto;
+		text-align: center;
+		padding-left: 30px;
+	}
+	.theback{
+		position: absolute ;
+		width: 100%;
+		height: 100%;
+		backface-visibility: hidden;
+		transform: rotateY(180deg);
+		border-radius: 50px;
+		font-size: 18px;
+		background-color: green;
+		color: white;
+		margin: auto;
+	}
+	
+	
 /*
 	.navigation ul li:nth-child(1).active ~ .indicator
 	{
