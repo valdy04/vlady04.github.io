@@ -1,13 +1,126 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css2?family=Allura&family=Arapey&display=swap');
 /* CSS Document */
+:root{
+--base-color:blanchedalmond;
+--black: black;
+--white: white;
+--colorRed:red;
+--color0:deeppink;
+--color1:#2808C9;
+--color2:#F86C00;
+--color3:#00FFFB; 
+--backColor:green;
+--nav-bar:#FFD395;
+--nav-bar-icon:#27AF00 ;
+--nav-bar-hover:#3BFF03;
+
+}
+
+body{
+--base-color:blanchedalmond;
+--black: black;
+--white: white;
+--colorRed:red;
+--color0:deeppink;
+--color1:#2808C9;
+--color2:#F86C00;
+--color3:#00FFFB; 
+--backColor:green;
+--nav-bar:#FFD395;
+--nav-bar-icon:#27AF00 ;
+--nav-bar-hover:#3BFF03;
+transition:all 1s ease;
+}
+body.dark-mode{
+--base-color:rgb(17, 17, 24);
+--black: rgb(255, 255, 255);
+--white: rgb(25, 24, 45);
+--colorRed:red;
+--color0:deeppink;
+--color1:#2808C9;
+--color2:#F86C00;
+--color3:#00FFFB; 
+--backColor:green;
+--nav-bar:#111a47;
+--nav-bar-icon:#27AF00 ;
+--nav-bar-hover:#3BFF03;
+transition:1s ;
+}
+
+
+
+label{
+	width: 50px;
+	height: 26px;
+	position: relative;
+	display: block;
+	background: green;
+	border-radius: 20px;
+	box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(255,255,255,255,0.4);
+	cursor: pointer;
+	transition: 0.3s;
+	justify-content: center;
+	float:;
+	
+
+}
+
+
+label::after{
+	content: " ";
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 3px;
+	left: 5px;
+	background: url("https://www.svgrepo.com/show/407540/sun.svg") 0 0 / 20px 20px repeat;
+	border-radius:  18px; 
+	box-shadow:  0px 5px  10px rgba(0,0,0,0,2);
+	transition: 0.3s;
+	
+}
+input{
+	position:absolute;
+	width: 0;
+	height: 0;
+	right: ;
+	
+}
+
+input:checked + label{
+	background: #4b5b8e;
+}
+
+input:checked + label:after{
+	left: 47px;
+	transform: translate(-100%);
+	background: url(https://www.svgrepo.com/show/528414/moon-stars.svg) 0 0 / 20px 20px repeat;
+
+}
+
+body.dark-mode .top-banner{
+background-image: url("../images/topbannerdarkmode.jpg");
+
+}
+
+.logo #img2{
+	display: none;
+}
+.dark-mode #img1{
+	display: none;
+}
+.dark-mode #img2{
+	display: block;
+}
+
 
 body {
     font-family: arapey;
     font-style: normal;
     font-weight: 400;
-	color: black;
-	background-color:blanchedalmond;
+	color: var(--black);
+	background-color:var(--base-color);
 	display: block;
 	justify-content: center;
 	align-items: center;
@@ -17,7 +130,7 @@ body {
 }
 
 a{
-	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-tap-highlight-color: var(--white);
 }
 a:focus,a:visited,a:active{
 	outline: none;
@@ -58,14 +171,15 @@ a:focus,a:visited,a:active{
 
 	
 }
-#logo{
+.logo{
 
-    max-width: 80px;
+    max-width: 50px;
     margin-left:auto;
 	margin-right: auto;
-    margin-top: 53px;
+    margin-top: 45px;
 	padding-left: 25px;
 	padding-right: 9px;
+	mix-blend-mode:;
 	
 	filter: blur(0);
 	-webkit-filter: blur(0);
@@ -119,18 +233,18 @@ a:focus,a:visited,a:active{
 	border-radius: 50%;
 	transform: rotate(calc(240deg / 4 * var(--i)));
 	box-shadow: 0 3px 4px rgba(0,0,0,0.15);
-	color: #111;
+	color:var(--black);
 	transition: 0.5s;
 
 }
 .menu li a:hover{
-	color: red
+	color: var(--colorRed);
 }
 .toggle{
 	position: absolute;
 	width: 70px;
 	height: 70px;
-	background: #ffff;
+	background: var(--white);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -186,19 +300,19 @@ a:focus,a:visited,a:active{
 	}
 .featured a, .featured1 a, .featured2 a, .featured3 a{
 	text-decoration: none;
-	color: black;
+	color: var(--black);
 }
 .featured:hover a{
-	color: deeppink;
+	color: var(--color0);
 }
 .featured1:hover a{
-	color:#2808C9;
+	color:var(--color1);
 }
 .featured2:hover a{
-	color: #F86C00;
+	color: var(--color2);
 }
 .featured3:hover a{
-	color:#00FFFB; 
+	color:var(--color3); 
 }
 
 
@@ -239,6 +353,7 @@ a:focus,a:visited,a:active{
 	align-content: center;
 	transition: all 0.5s ease;
 	justify-content: center; 
+	
 	}
 .infoCard{
 	position: absolute  ;
@@ -279,7 +394,7 @@ a:focus,a:visited,a:active{
 	width: 90%;
 	height: 100px ;
 	backface-visibility: hidden;
-	background-color: white;
+	background-color: var(--white);
 	border-radius: 100px;
 	justify-content: center;
 	align-items: center;
@@ -287,6 +402,7 @@ a:focus,a:visited,a:active{
 	margin:auto;
 	text-align: center;
 	padding-left: 9%;
+	transition: 0.5 ease;
 	
 	
 }
@@ -299,12 +415,12 @@ a:focus,a:visited,a:active{
     transform: rotateY(180deg);
     border-radius: 50px;
     font-size: 15px;
-    background-color: green;
-    color: white;
+    background-color: var(--backColor);
+    color: var(--white);
 	
 }
 #welcome_img{
-	background: white;
+	background: var(--white);
 	border-radius: 50px 0px 0px 50px ;
 	width: 79px;
 	height: 80px;
@@ -346,10 +462,10 @@ a:focus,a:visited,a:active{
 		
 }
 .footer{
-	color: white;
+	color: var(--black);
 	width: 100%;
 	height: 50px;
-	background:#000000;
+	background:var(--white);
 	display: flex;
 	border-radius: 10px 10px 0px 0px;
 	
@@ -380,8 +496,8 @@ a:focus,a:visited,a:active{
     font-family: arapey;
     font-style: normal;
     font-weight: 400;
-	color: black;
-	background-color:blanchedalmond;
+	color: var(--black);
+	background-color: var(--base-color);
 	display:flex;
 	justify-content: center;
 	align-items: center;
@@ -432,12 +548,12 @@ a:focus,a:visited,a:active{
 	
 
 
-	#logo{
-
+	.logo{
+	position: relative;
     max-width: 130px;
     margin-left: auto;
 	margin-right: auto;
-    margin-top: 190px;
+    margin-top: 170px;
 	
 }
 	
@@ -461,13 +577,13 @@ a:focus,a:visited,a:active{
 		height:60px;
 		display: flex;
 /*		nav bar color*/
-		background: #FFD395;
+		background: var(--nav-bar);
 		justify-content:center;
 		align-items: center;
 		border-radius: 10px;
 		margin-left: auto;
 		margin-right: auto;
-		border-color: black;
+		border-color: var(--black);
 		box-shadow: 0 1px 9px -1px  ;
 		
 	}
@@ -502,24 +618,24 @@ a:focus,a:visited,a:active{
 		line-height: 65px;
 		font-size: 2.0em;
 		transition: 0.5s;
-		color: black;
+		color: var(--black);
 	}
 	.navigation ul li:hover a .icon{
 		transform: translateY(-32px);
 /*		icon color*/
-		color:#27AF00 ;
+		color:var(--nav-bar-icon) ;
 		
 	}
 		.navigation ul li:nth-child(1) a .icon{
 		transform: translateY(-32px);
 /*		icon color*/
-		color:#27AF00 ;
+		color:var(--nav-bar-icon) ;
 		
 	}
 	.navigation ul li a .text{
 		position: absolute;
 /*		border text color*/
-		background: #27AF00;
+		color:var(--nav-bar-icon);
 		color: white;
 		padding: 2px 7px;
 		border-radius: 12px;
@@ -548,7 +664,7 @@ a:focus,a:visited,a:active{
 		.navigation ul:hover li:nth-child(1) a .icon{
 		transform: translate(0px);
 /*		icon color*/
-		color:black;
+		color:var(--black);
 	}	
 		.navigation ul:hover li:nth-child(1) a .text{
 		opacity: 0;
@@ -557,12 +673,12 @@ a:focus,a:visited,a:active{
 	.navigation ul li:nth-child(1):hover a .text
 	{
 		opacity: 1;
-		background-color:#3BFF03;
+		background-color:var(--nav-bar-hover);
 		
 	}.navigation ul li:nth-child(1):hover a .icon
 	{
 		transform: translateY(-32px);
-		color:#3BFF03;
+		color:var(--nav-bar-hover);
 		
 	}
 
@@ -601,7 +717,7 @@ a:focus,a:visited,a:active{
 		width: 70px;
 		height: 70px;
 /*		inidicator color*/
-		background:#FFD395;
+		background:var(--nav-bar);
 		border-radius: 50%;
 		z-index: 1;
 		transition: 0.5s;
@@ -618,7 +734,7 @@ a:focus,a:visited,a:active{
 		background: transparent;
 		border-radius: 50%;
 /*		indicator color2*/
-		box-shadow: 15px 18px #FFD395;
+		box-shadow: 15px 18px var(--nav-bar);
 		
 	}
 		.indicator::after{
@@ -631,7 +747,7 @@ a:focus,a:visited,a:active{
 		background: transparent;
 		border-radius: 50%;
 /*			indicator color*/
-		box-shadow: -15px 18px #FFD395;
+		box-shadow: -15px 18px var(--nav-bar);
 }
 	/*.infoContainer:hover{
 	width: ;
@@ -693,7 +809,7 @@ a:focus,a:visited,a:active{
 		width: 100%;
 		height: 100px ;
 		backface-visibility: hidden;
-		background-color: white;
+		background-color: var(--white);
 		border-radius: 100px;
 		justify-content: center;
 		align-items: center;
@@ -710,8 +826,8 @@ a:focus,a:visited,a:active{
 		transform: rotateY(180deg);
 		border-radius: 50px;
 		font-size: 18px;
-		background-color: green;
-		color: white;
+		background-color: var(--backColor);
+		color: var(--white);
 		margin: auto;
 	}
 	
